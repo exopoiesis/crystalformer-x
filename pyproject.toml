@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crystalformer-x"
+version = "0.1.0"
+description = "Post-generation analysis, screening, and guided sampling toolkit for CrystalFormer"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Igor Morozov", email = "igor@exopoiesis.space"},
+    {name = "Claude (Anthropic)", email = "noreply@anthropic.com"},
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pymatgen>=2024.1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/exopoiesis/crystalformer-x"
+Issues = "https://github.com/exopoiesis/crystalformer-x/issues"
+
+[tool.setuptools.packages.find]
+include = ["crystalformer_x*"]
